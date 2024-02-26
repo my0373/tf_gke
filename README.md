@@ -63,3 +63,10 @@ When finished, destroy your cluster
 ```shell
 terraform destroy
 ```
+
+## Configuring kubectl
+After the install is complete the following command will configure kubectl with the details of your cluster
+
+```shell
+gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region)
+```
