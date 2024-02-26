@@ -5,8 +5,9 @@ At present, it just deploys a GKE cluster with a subnet and external access.
 
 Much of the boilerplate code was taken from the Hashicorp tutorial here [Provision a GKE Cluster tutorial](https://developer.hashicorp.com/terraform/tutorials/kubernetes/gke).
 
+
+## OSX Setup
 ### Install Terraform and setup GCP connectivity
-#### OSX Setup
 Install terraform on your mac
 ```shell
 brew install terraform
@@ -17,7 +18,8 @@ Install google cloud SDK
 brew install --cask google-cloud-sdk
 ```
 
-#### Fedora Setup
+## Fedora Setup
+### Install Terraform and setup GCP connectivity
 Install terraform repo.
 ```shell
 sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
