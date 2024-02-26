@@ -64,7 +64,8 @@ When finished, destroy your cluster
 terraform destroy
 ```
 
-## Configuring kubectl
+
+## Configuring kubectl
 After the install is complete the following command will configure kubectl with the details of your cluster
 
 ```shell
