@@ -33,7 +33,6 @@ Change directory into the repo.
 └── deploy-gke-cluster
     ├── LICENSE
     ├── README.md
-    ├── build_cluster.yml
     ├── gke.tf
     ├── kubernetes-dashboard-admin.rbac.yaml
     ├── outputs.tf
