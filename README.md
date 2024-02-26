@@ -71,3 +71,8 @@ After the install is complete the following command will configure kubectl with 
 ```shell
 gcloud container clusters get-credentials $(terraform output -raw kubernetes_cluster_name) --region $(terraform output -raw region)
 ```
+
+You can then test connectivity to your clusters
+```shell
+kubectl get nodes
+```
