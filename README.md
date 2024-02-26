@@ -49,6 +49,11 @@ Install google cloud SDK
 sudo dnf install -y google-cloud-sdk
 ```
 
+Install the gcloud auth plugin.
+```shell
+sudo yum install google-cloud-sdk-gke-gcloud-auth-plugin 
+```
+
 Authenticate with the GCP
 ```shell
 gcloud auth application-default login
