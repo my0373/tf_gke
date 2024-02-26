@@ -5,7 +5,7 @@ At present, it just deploys a GKE cluster with a subnet and external access.
 
 Much of the boilerplate code was taken from the Hashicorp tutorial here [Provision a GKE Cluster tutorial](https://developer.hashicorp.com/terraform/tutorials/kubernetes/gke).
 
-## Install on a OSX using Homebrew.
+## Install on an system OSX using Homebrew.
 #### Install Terraform and setup GCP connectivity
 
 Install terraform on your mac
