@@ -75,3 +75,5 @@ You can then test connectivity to your clusters
 ```shell
 kubectl get nodes
 ```
+
+You can check the status of the clusters in the [GKE console](https://console.cloud.google.com/kubernetes/list/overview?project=soleng-dev&supportedpurview=project). 
