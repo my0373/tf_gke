@@ -5,9 +5,8 @@ At present, it just deploys a GKE cluster with a subnet and external access.
 
 Much of the boilerplate code was taken from the Hashicorp tutorial here [Provision a GKE Cluster tutorial](https://developer.hashicorp.com/terraform/tutorials/kubernetes/gke).
 
-## Install on an system OSX using Homebrew.
-#### Install Terraform and setup GCP connectivity
-
+### Install Terraform and setup GCP connectivity
+#### OSX Setup
 Install terraform on your mac
 ```shell
 brew install terraform
@@ -17,9 +16,40 @@ Install google cloud SDK
 ```shell
 brew install --cask google-cloud-sdk
 ```
+
+#### Fedora Setup
+Install terraform repo.
+```shell
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+```
+
+Install Terraform
+```shell
+sudo dnf install terraform
+```
+
+Install google cloud SDK repo
+```shell
+sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
+[google-cloud-sdk]
+name=Google Cloud SDK
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
+       https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOM
+```
+
+Install google cloud SDK
+```shell
+sudo dnf install -y google-cloud-sdk
+```
+
 Authenticate with the GCP
 ```shell
-gcloud auth login
+gcloud auth application-default login
 ```
 
 Test connectivity by getting the you default configured project
