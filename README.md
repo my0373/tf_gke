@@ -36,6 +36,7 @@ dnf install kubectl
 ```
 
 Install google cloud SDK repo
+Google instructions can be found [here](https://cloud.google.com/sdk/docs/install#rpm).
 ```shell
 sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
 [google-cloud-cli]
