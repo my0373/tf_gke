@@ -30,28 +30,32 @@ Install Terraform
 sudo dnf install terraform
 ```
 
+Install kubectl
+```shell
+dnf install kubectl
+```
+
 Install google cloud SDK repo
 ```shell
 sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM
-[google-cloud-sdk]
-name=Google Cloud SDK
-baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64
+[google-cloud-cli]
+name=Google Cloud CLI
+baseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el9-x86_64
 enabled=1
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg
-       https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+gpgkey=https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOM
 ```
 
 Install google cloud SDK
 ```shell
-sudo dnf install -y google-cloud-sdk
+sudo dnf install google-cloud-cli
 ```
 
 Install the gcloud auth plugin.
 ```shell
-sudo yum install google-cloud-sdk-gke-gcloud-auth-plugin 
+sudo dnf install google-cloud-cli-gke-gcloud-auth-plugin
 ```
 
 Authenticate with the GCP
